@@ -1,0 +1,122 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="row">
+        <!-- The carousel -->
+        <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+			<!-- Indicators -->
+
+              
+
+			<ol class="carousel-indicators">
+
+				<li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#transition-timer-carousel" data-slide-to="1"></li>
+				<li data-target="#transition-timer-carousel" data-slide-to="2"></li>
+                <li data-target="#transition-timer-carousel" data-slide-to="3"></li>
+                <li data-target="#transition-timer-carousel" data-slide-to="4"></li>
+			</ol>
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+                {% for carusel in carusels %}
+                     {% if forloop.first %}
+				<div class="item active">
+                    <img src="{{ carusel.image.url}}" />
+                    <div class="carousel-caption">
+                        <h1 class="carousel-caption-header"></h1>
+                        <p class="carousel-caption-text hidden-sm hidden-xs"> </p>
+                    </div>
+                </div>
+                     {% else %}
+               
+                
+                <div class="item">
+                    <img src="{{ carusel.image.url}}" />
+                    <div class="carousel-caption">
+                        <h1 class="carousel-caption-header"></h1>
+                        <p class="carousel-caption-text hidden-sm hidden-xs"></p>
+                    </div>
+                </div>
+                {% endif %}
+               {% endfor  %}
+              
+
+            </div>
+                  
+ 
+    
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+      
+            <!-- Timer "progress bar" -->
+            <hr class="transition-timer-carousel-progress-bar animate" />
+		</div>
+
+    
+
+    </div>
+<br />
+
+<div class="row">
+<div class="jumbotron">
+    <h1 class="text-center" style="color:black;"> << CONNECT electronics >> </h1>
+    <p class="lead">Компания «CONNECT electronics» - крупнейшая интернет компания  по продаже бытовой техники
+                    и электроники России и Восточной Европы.
+                    Первый интернет-магазин компании был открыт в 2014 году в г.Псков. <br /><br />
+                    Сегодня под логотипом компании на всей территории России и Европы
+                    действуют более 100 интернет-магазинов электроники. С 2016 года «CONNECT electronics» открывает 
+                    исключительно новые товары из США и Южной Америки.<br /><br />
+                    Интерент-магазины CONNECT electronics - это одна из крупнейших россйиских торговых сетей,
+                    предоставляющих богатый ассортимент различной бытовой техники для дома и для офиса.
+                    Подторговой маркой CONNECT electronics в России открыто более 40 тороговых точек.<br /><br /> 
+                    На продажу бытовой техники компания CONNECT electronics имеет прямые договоры с таким известными 
+                    производителями как Samsung, Bosch, LG, Sony, Panasonic, Nokia и мн. др.<br /><br /> 
+                    Ассортимент магазинов CONNECT electronics составляет бытовая техника - холодильники,
+                    пылесосы, электрические плиты, мелкая бытовая техника -тостеры, комбайны,
+                    весы, миксеры, блендеры, встраиваемая техника - вытяжки, духовые шкафы, 
+                    электрические и газовые панели, электроника, компьютеры, ноутбуки, мобильные 
+                    телефоны, а также фото и видео техника.
+</p>
+    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn  &raquo;</a></p>
+</div>
+    </div>
+
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            Django gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://www.djangobook.com/en/2.0/index.html">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>The Python Package Index is a repository of software for the Python programming language.</p>
+        <p><a class="btn btn-default" href="https://pypi.org/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Microsoft Azure</h2>
+        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+

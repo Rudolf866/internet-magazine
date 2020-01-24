@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <h3 class="text-center">Спасибо за Ваш заказ! 
+        Он принят в обработку.В ближайшее время менеджер с Вами свяжется.</h3>
+
+        <p class="text-center"><a href="{% url 'base_view'%}">
+
+        <button class="btn btn-default">Вернуться к покупкам</button></a>
+
+        </p>
+
+     
+
+    </div>
+</div>
+{% endblock %}

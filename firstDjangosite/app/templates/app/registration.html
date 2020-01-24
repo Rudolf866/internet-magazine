@@ -1,0 +1,26 @@
+﻿<!--♕-->
+{% extends "app/layout.html" %}
+{% load bootstrap %}
+{% block content %}
+
+<div class="row">
+
+ <h2 class="text-center">Регистрация пользователя</h2>
+
+ <form method="POST"  enctype="multipart/form-data"> 
+     {% csrf_token %}
+
+ <div class="col-sm-8 col-sm-offset-2">
+
+ {{ regform|bootstrap }}
+
+ <p class="text-center"><button type="submit" class="save btn btn-primary" > Зарегистрировать</button></p>
+
+ </div>
+
+ </form>
+
+</div>
+
+
+{% endblock %}

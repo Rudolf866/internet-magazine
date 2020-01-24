@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>firstDjangosite</Name>
+    <RootNamespace>firstDjangosite</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>69becbbf-d619-4f74-9f34-e88a139e95e8</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>firstDjangosite.settings</DjangoSettingsModule>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\forms.py" />
+    <Compile Include="app\models.py" />
+    <Compile Include="app\tests.py" />
+    <Compile Include="app\views.py" />
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="firstDjangosite\__init__.py" />
+    <Compile Include="firstDjangosite\settings.py" />
+    <Compile Include="firstDjangosite\urls.py" />
+    <Compile Include="firstDjangosite\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\migrations\" />
+    <Folder Include="app\media\" />
+    <Folder Include="app\carousel\" />
+    <Folder Include="app\product_image\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\static\app\" />
+    <Folder Include="app\static\app\content\" />
+    <Folder Include="app\static\app\fonts\" />
+    <Folder Include="app\static\app\News\" />
+    <Folder Include="app\static\app\photogallery\" />
+    <Folder Include="app\static\app\scripts\" />
+    <Folder Include="app\templates\" />
+    <Folder Include="app\templates\app\" />
+    <Folder Include="firstDjangosite\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\carousel\carusel1.jpg" />
+    <Content Include="app\carousel\carusel2.jpg" />
+    <Content Include="app\carousel\carusel3.jpg" />
+    <Content Include="app\carousel\carusel4.jpg" />
+    <Content Include="app\carousel\carusel5.jpg" />
+    <Content Include="app\product_image\2796_2.jpg" />
+    <Content Include="app\product_image\2asuszenbookflipux561ude2026r.jpg" />
+    <Content Include="app\product_image\c3fe7b1a4e52e7bca48480136ab807ab.png" />
+    <Content Include="app\product_image\foto1.jpg" />
+    <Content Include="app\product_image\foto2.jpg" />
+    <Content Include="app\product_image\foto3.jpg" />
+    <Content Include="app\product_image\galaxy-a5-2017-update.png" />
+    <Content Include="app\product_image\iphone-x-128gb.png" />
+    <Content Include="app\product_image\notebook-hp.png" />
+    <Content Include="app\product_image\samsung_galaxy_s9_64gb_black_sku_header.png" />
+    <Content Include="app\product_image\sony-experia-xz2-64gb.png" />
+    <Content Include="app\product_image\tv1.jpg" />
+    <Content Include="app\product_image\tv2.jpg" />
+    <Content Include="app\product_image\tv3.jpg" />
+    <Content Include="app\product_image\tv4.jpg" />
+    <Content Include="app\product_image\tv5.jpg" />
+    <Content Include="app\product_image\video1.jpg" />
+    <Content Include="app\product_image\video2.jpg" />
+    <Content Include="app\static\app\content\logo.ico" />
+    <Content Include="app\static\app\content\logo.jpg" />
+    <Content Include="app\static\app\News\honer.png" />
+    <Content Include="app\static\app\News\Noutbook.png" />
+    <Content Include="app\static\app\News\open.png" />
+    <Content Include="app\static\app\photogallery\magazin1.png" />
+    <Content Include="app\static\app\photogallery\magazin2.png" />
+    <Content Include="app\static\app\photogallery\magazin3.png" />
+    <Content Include="app\static\app\photogallery\magazin4.png" />
+    <Content Include="app\static\app\photogallery\magazin5.png" />
+    <Content Include="app\static\app\photogallery\magazin6.png" />
+    <Content Include="app\static\app\photogallery\sclad1.png" />
+    <Content Include="app\static\app\photogallery\sclad10.png" />
+    <Content Include="app\static\app\photogallery\sclad11.png" />
+    <Content Include="app\static\app\photogallery\sclad12.png" />
+    <Content Include="app\static\app\photogallery\sclad13.png" />
+    <Content Include="app\static\app\photogallery\sclad2.png" />
+    <Content Include="app\static\app\photogallery\sclad3.png" />
+    <Content Include="app\static\app\photogallery\sclad4.png" />
+    <Content Include="app\static\app\photogallery\sclad5.png" />
+    <Content Include="app\static\app\photogallery\sclad6.png" />
+    <Content Include="app\static\app\photogallery\sclad7.png" />
+    <Content Include="app\static\app\photogallery\sclad8.png" />
+    <Content Include="app\static\app\photogallery\sclad9.png" />
+    <Content Include="app\templates\app\account.html" />
+    <Content Include="app\templates\app\base.html" />
+    <Content Include="app\templates\app\blog.html" />
+    <Content Include="app\templates\app\blogpost.html" />
+    <Content Include="app\templates\app\cart.html" />
+    <Content Include="app\templates\app\category.html" />
+    <Content Include="app\templates\app\checkout.html" />
+    <Content Include="app\templates\app\gallery.html" />
+    <Content Include="app\templates\app\my_order.html" />
+    <Content Include="app\templates\app\newpost.html" />
+    <Content Include="app\templates\app\order.html" />
+    <Content Include="app\templates\app\product.html" />
+    <Content Include="app\templates\app\registration.html" />
+    <Content Include="app\templates\app\thank_you.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="app\static\app\content\bootstrap.css" />
+    <Content Include="app\static\app\content\bootstrap.min.css" />
+    <Content Include="app\static\app\content\site.css" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\static\app\scripts\bootstrap.js" />
+    <Content Include="app\static\app\scripts\bootstrap.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="app\static\app\scripts\respond.js" />
+    <Content Include="app\static\app\scripts\respond.min.js" />
+    <Content Include="app\static\app\scripts\_references.js" />
+    <Content Include="app\templates\app\about.html" />
+    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\index.html" />
+    <Content Include="app\templates\app\layout.html" />
+    <Content Include="app\templates\app\login.html" />
+    <Content Include="app\templates\app\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.html">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

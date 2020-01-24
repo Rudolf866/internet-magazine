@@ -1,0 +1,28 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+        <h1>Новости интернет магазина " CONNECT electronics "</h1>
+    
+        
+
+ <br />
+   
+    <br /><br /><br /><br /><br /><br />
+
+        {% for post in posts %}
+        {% if post.image and post.image.url != '/media/112.jpg' %}
+        <img src="{{ post.image.url }}" alt="" />
+        {% endif %}
+
+        <h2><a href="{% url 'blogpost' parametr=post.id %}"> {{post.title}}</a> </h2>
+        
+        <h4>{{ post.description }} </h4>
+        <p> {{post.posted}} </p>
+    <hr/>
+        {% endfor %}
+      
+</div>
+
+{% endblock %}

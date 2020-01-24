@@ -1,0 +1,43 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+{% load bootstrap %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+{% if post_1.image and post_1.image.url != '/media/112.jpg' %}
+<img src="{{ post_1.image.url }}" alt="" />
+{% endif %}
+
+<h2> {{post_1.title}} </h2>
+
+<h4> {{post_1.content|linebreaksbr}} </h4> {# вывод текста по абзацам#}
+
+ <h3>Добавить комментарий</h3>
+ <form method="POST" >{% csrf_token %} {# защита от атак CSRF#}
+ <div>
+ {{form|bootstrap}}
+ <button type="submit" class="save btn btn-danger" > Отправить
+комментарий </button>
+ </div>
+ </form>
+{% else %}
+{% if post_1.image and post_1.image.url != '/media/112.jpg' %}
+<img src="{{ post_1.image.url }}" alt="" />
+{% endif %}
+
+<h2> {{post_1.title}} </h2>
+
+<p> {{post_1.content|linebreaksbr}} </p> {# вывод текста по абзацам#}
+
+ <h3> Для добавления своего комментария, пожалуйста, <a href="{% url 'login' %}">авторизуйтесь</a>
+</h3>
+{% endif %}
+
+{% for comment in comments %}
+<hr/>
+<h5> {{comment.date}} </h5>
+<h5> {{comment.author}} </h5>
+<p> {{comment.text|linebreaksbr}} </p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,124 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+{% block content %}
+
+
+   
+<div class="container">
+    <div class="row">
+        <div id="testCarousel" class="carousel slide" data-ride="carousel">
+
+	              <!-- Слайды карусели -->
+	              <div class="carousel-inner">
+   {% for product in products %}
+     {% if forloop.first %}
+	              	<!-- Слайд 1 -->
+		 <div class="item active">
+			<img class="slide-image" src="{{ product.image.url}}" alt="Alternate Text" 
+          style="padding-left:260px;height:200px;" />
+			<p class="text-center"><a href="{{ product.image.url}}">
+                <button class="btn btn-primary">
+                {{ product.title}}  </button></a></p>
+		</div>
+     {% else %}
+		<!-- Слайд 2 -->
+		<div class="item">
+			<img class="slide-image" src="{{ product.image.url}}" alt="Alternate Text" 
+             style="padding-left:260px;height:200px;"    />
+			<p class="text-center"><a href="{{ product.image.url}}">
+                <button class="btn btn-primary">
+                {{ product.title}}  </button></a></p>
+		</div>
+		
+     {% endif %}
+   {% endfor  %}
+	</div>
+	<!-- Навигация карусели (следующий или предыдущий слайд) -->
+	<!-- Кнопка, переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+	<a class="left carousel-control" href="#testCarousel" 
+       role="button" data-slide="prev" style="background:transparent;" >
+		<span class="glyphicon glyphicon-chevron-left" style="color:black;" ></span>
+	</a>
+	<!-- Кнопка, переход на следующий слайд с помощью атрибута data-slide="next" -->
+	<a class="right carousel-control" href="#testCarousel" 
+       role="button" data-slide="next" style="background:transparent;" >
+		<span class="glyphicon glyphicon-chevron-right" style="color:black;" ></span>
+	</a>
+</div>
+        
+        <div class="col-md-2">
+            <h3 >Категории</h3>
+            <div class="list-group">
+                {% for category in categories %}
+                <a href="{{ category.get_absolute_url }}" class="list-group-item">
+                {{ category.name }}</a>
+
+             {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    
+<br />
+<br />
+<br />   
+<br />
+<br />
+<br />
+<br />
+
+    <div class="row">
+        {% for product in products %}
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src="{{ product.image.url }}" alt="" style='width:70%; 
+                                                          height:200px;'/>
+                <div class="caption">   
+                    <h5 class="text-center"style="font-size:20px"><strong><a href="{{ product.get_absolute_url }}">
+                        {{ product.title }}</a></strong></h5>
+                   <h4 class="text-center" style="font-size:25px">
+                    <strong>{{ product.price }} руб.</strong></h4>
+                        {% if request.user.is_authenticated %}
+                       <p class="text-center"><a href="#" class="add_to_cart"
+                        data-slug="{{product.slug}}" ><button class="btn btn-danger">Добавить в корзину</button></a></p>
+                        {% else %}
+                        
+                        <small class="text-center">Заказывать товар могут только авторизированные пользователи.
+                        Пожалуйста,<a href="{% url 'registration' %}">зарегистрируйтесь</a>.
+                        </small>
+                        {% endif %}  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>        
+<script>
+ $(document).ready(function()
+  {
+     $('.add_to_cart').on('click', function (e)
+     {
+       e.preventDefault()
+       product_slug = $(this).attr('data-slug')
+         data =
+         {
+             product_slug:product_slug
+         }
+         $.ajax({
+
+             type: "GET",
+             url: '{% url "add_to_cart" %}',
+             data: data,
+             success: function (data)
+             {
+                 $("#cart_count").html(data.cart_total)
+             }
+
+         })
+     })
+  })
+ 
+
+</script>
+{% endblock %}

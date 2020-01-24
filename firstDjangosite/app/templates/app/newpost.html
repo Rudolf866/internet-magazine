@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+{% load static %}
+{% load bootstrap %}
+
+{% block content %}
+
+ <form method="POST"  enctype="multipart/form-data">{% csrf_token %} {# защита от атак CSRF#}
+
+ <div>
+     
+
+ {{form|bootstrap}}
+
+ <button type="submit" class="save btn btn-primary" > Разместить статью </button>
+
+ </div>
+
+ </form>
+
+{% endblock %}

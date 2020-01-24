@@ -1,0 +1,31 @@
+﻿<!--♕-->
+{% if user.is_authenticated %}
+<form id="logoutForm" action="/logout" method="post" class="navbar-right">
+    {% csrf_token %}
+
+    {% if  user.is_authenticated %} {% if not user.is_staff %}{% if  not user.is_superuser %}
+      <ul class="nav navbar-nav navbar-right">
+       <li><a href="{% url 'cart' %}">Корзина 
+            <span class="label label-default"> <span class="bange" id="cart_count">
+           {% if not request.session.total %}
+          0 {% else %}{{ request.session.total }} {% endif %}</span></span>
+           <span class="label label-default"></span></a></li>
+     </ul>
+     {% endif %} {% endif %} {% endif %}
+
+    
+    <ul class="nav navbar-nav navbar-right">
+        <li><span class="navbar-brand">Hello {{ user.username }}!</span></li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Выйти</a></li>
+    </ul>
+
+    
+</form>
+
+{% else %}
+
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="{% url 'login' %}">Вход на сайт</a></li>
+</ul>
+
+{% endif %}

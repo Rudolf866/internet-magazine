@@ -1,0 +1,39 @@
+﻿<!--♕-->
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<address>
+    Город: Псков.<br />
+    Улица: пл. Ленина, дом 2. <br />
+    Индекс: 180000. <br />
+    <abbr title="Phone">Тел:</abbr>
+    +7(8112) 29-70-01, 
+     <abbr title="Fax">Факс:</abbr>
+    +7(8112) 29-70-02 
+</address>
+
+<address>
+    <strong>Поддержка:</strong>   <a href="mailto:connect@outlook.com">connect@outlook.com</a><br />
+    <strong>Маркетинг:</strong> <a href="mailto:connect@outlook.com">connect@outlook.com</a>
+</address>
+<br />
+<h3>{{ Developer }}</h3>
+
+<address>
+    Город: Псков.<br />
+    Улица: пл. Техническая, дом 14. <br />
+    Индекс: 180020. <br />
+    <abbr title="Phone">Тел:</abbr>
+    +7(953) 23-72-699, 
+     
+</address>
+
+<address>
+    <strong>Поддержка:</strong>   <a href="mailto:kovalevskiy2017@outlook.com">kovalevskiy2017@outlook.com</a><br />
+    <strong>Маркетинг:</strong> <a href="mailto:kovalevskiy2017@outlook.com">kovalevskiy2017@outlook.com</a>
+</address>
+{% endblock %}
